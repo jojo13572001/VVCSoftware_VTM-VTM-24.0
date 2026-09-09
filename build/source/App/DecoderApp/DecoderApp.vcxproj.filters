@@ -1,44 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\App\DecoderApp\DecApp.cpp">
+    <ClCompile Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\App\DecoderApp\DecApp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\App\DecoderApp\DecAppCfg.cpp">
+    <ClCompile Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\App\DecoderApp\DecAppCfg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\App\DecoderApp\decmain.cpp">
+    <ClCompile Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\App\DecoderApp\decmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\App\DecoderApp\DecApp.h">
+    <ClInclude Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\App\DecoderApp\DecApp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\App\DecoderApp\DecAppCfg.h">
+    <ClInclude Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\App\DecoderApp\DecAppCfg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\App\DecoderApp\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\App\DecoderApp\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Natvis Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\VisualStudio\common.natvis">
+    <Natvis Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\VisualStudio\common.natvis">
       <Filter>Natvis Files</Filter>
     </Natvis>
-    <Natvis Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\VisualStudio\static_vector.natvis">
+    <Natvis Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\VisualStudio\static_vector.natvis">
       <Filter>Natvis Files</Filter>
     </Natvis>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{05547E0E-887B-3C6D-AB32-7E83BC1CD9C5}</UniqueIdentifier>
+      <UniqueIdentifier>{082A4D2D-CC82-3780-A8AB-E65AB437C4D4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Natvis Files">
-      <UniqueIdentifier>{4F9798DA-B089-309F-B266-52C7685CFA24}</UniqueIdentifier>
+      <UniqueIdentifier>{EB1F8C08-B786-3F7C-9907-C75350826311}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{F48A9A06-E8A5-35D4-8170-C9CB2715A3F1}</UniqueIdentifier>
+      <UniqueIdentifier>{D17BDD4A-82F9-389E-8772-F4025A2AF8C6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

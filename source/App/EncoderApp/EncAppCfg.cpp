@@ -47,6 +47,7 @@
 #include "Utilities/program_options_lite.h"
 #include "Utilities/VideoIOYuv.h"
 #include "CommonLib/Rom.h"
+#include "CommonLib/SEI.h"
 #include "EncoderLib/RateCtrl.h"
 
 #include "CommonLib/dtrace_next.h"
@@ -761,15 +762,24 @@ bool EncAppCfg::parseCfg( int argc, char* argv[] )
 
   int warnUnknowParameter = 0;
 
-  SMultiValueInput<uint32_t>   cfg_FgcSEIIntensityIntervalLowerBoundComp0 (0, 255, 0, 256);
-  SMultiValueInput<uint32_t>   cfg_FgcSEIIntensityIntervalLowerBoundComp1 (0, 255, 0, 256);
-  SMultiValueInput<uint32_t>   cfg_FgcSEIIntensityIntervalLowerBoundComp2 (0, 255, 0, 256);
-  SMultiValueInput<uint32_t>   cfg_FgcSEIIntensityIntervalUpperBoundComp0 (0, 255, 0, 256);
-  SMultiValueInput<uint32_t>   cfg_FgcSEIIntensityIntervalUpperBoundComp1 (0, 255, 0, 256);
-  SMultiValueInput<uint32_t>   cfg_FgcSEIIntensityIntervalUpperBoundComp2 (0, 255, 0, 256);
-  SMultiValueInput<uint32_t>   cfg_FgcSEICompModelValueComp0              (0, 65535,  0, 256 * 6);
-  SMultiValueInput<uint32_t>   cfg_FgcSEICompModelValueComp1              (0, 65535,  0, 256 * 6);
-  SMultiValueInput<uint32_t>   cfg_FgcSEICompModelValueComp2              (0, 65535,  0, 256 * 6);
+  SMultiValueInput<uint32_t>   cfg_FgcSEIIntensityIntervalLowerBound[MAX_NUM_COMPONENT] =
+  {
+    SMultiValueInput<uint32_t>(0, 255, 0, 256),
+    SMultiValueInput<uint32_t>(0, 255, 0, 256),
+    SMultiValueInput<uint32_t>(0, 255, 0, 256)
+  };
+  SMultiValueInput<uint32_t>   cfg_FgcSEIIntensityIntervalUpperBound[MAX_NUM_COMPONENT] =
+  {
+    SMultiValueInput<uint32_t>(0, 255, 0, 256),
+    SMultiValueInput<uint32_t>(0, 255, 0, 256),
+    SMultiValueInput<uint32_t>(0, 255, 0, 256)
+  };
+  SMultiValueInput<uint32_t>   cfg_FgcSEICompModelValue[MAX_NUM_COMPONENT] =
+  {
+    SMultiValueInput<uint32_t>(0, 65535, 0, 256 * 6),
+    SMultiValueInput<uint32_t>(0, 65535, 0, 256 * 6),
+    SMultiValueInput<uint32_t>(0, 65535, 0, 256 * 6)
+  };
   SMultiValueInput<unsigned>   cfg_siiSEIInputNumUnitsInSI(0, std::numeric_limits<uint32_t>::max(), 0, 7);
   SMultiValueInput<bool>       cfg_poSEIWrappingFlag(false, true, 0, 256);
   SMultiValueInput<uint16_t>   cfg_poSEIImportanceIdc(0, 3, 0, 256);
@@ -779,8 +789,6 @@ bool EncAppCfg::parseCfg( int argc, char* argv[] )
 
   SMultiValueInput<uint16_t>   cfg_poSEINumofPrefixBits(0, 255, 0, 256);
   SMultiValueInput<uint16_t>   cfg_poSEIPrefixByte     (0, 255, 0, 256);
-
-  SMultiValueInput<int32_t> cfg_postFilterHintSEIValues(INT32_MIN + 1, INT32_MAX, 1 * 1 * 1, 15 * 15 * 3);
 
   std::vector<SMultiValueInput<uint32_t>>   cfg_nnPostFilterSEICharacteristicsInterpolatedPicturesList;
   std::vector<SMultiValueInput<bool>>   cfg_nnPostFilterSEICharacteristicsInputPicOutputFlagList;
@@ -1305,6 +1313,14 @@ bool EncAppCfg::parseCfg( int argc, char* argv[] )
   ("PPSInitialQPOffset",                              m_qpRefAdj,                                           0, "Offset added to initial QP value coded in PPS")
   ("QPIncrementFrame,-qpif",                          m_qpIncrementAtSourceFrame,   std::optional<uint32_t>(), "If a source file frame number is specified, the internal QP will be incremented for all POCs associated with source frames >= frame number. If empty, do not increment.")
   ("IntraQPOffset",                                   m_intraQPOffset,                                      0, "Qp offset value for intra slice, typically determined based on GOP size")
+#if JVET_AP0070
+  ("InterQPOffsetFrame*", m_interQPOffsetFrame, std::map<int, int>(), "Qp offset value for every * frame, where * is an integer."
+    " E.g. --InterQPOffsetFrame16 1 will set the Qp offset to 1 at every 16th frame")
+  ("InterQPOffsetModelOffsetFrame*", m_interQPOffsetModelOffsetFrame, std::map<int, double>(), "Qp offset value for every * frame, where * is an integer."
+      " E.g. --InterQPOffsetModelOffsetFrame16 1.0 will set the Qp offset to 1 at every 16th frame")
+  ("InterQPOffsetModelScaleFrame*", m_interQPOffsetModelScaleFrame, std::map<int, double>(), "Qp offset value for every * frame, where * is an integer."
+      " E.g. --InterQPOffsetModelScaleFrame16 1.0 will set the Qp offset to 1 at every 16th frame")
+#endif
   ("LambdaFromQpEnable",                              m_lambdaFromQPEnable,                             false, "Enable flag for derivation of lambda from QP")
   ("DeltaQpRD,-dqr",                                  m_uiDeltaQpRD,                                       0u, "max dQp offset for slice")
   ("MaxDeltaQP,d",                                    m_iMaxDeltaQP,                                        0, "max dQp offset for block")
@@ -1710,15 +1726,15 @@ bool EncAppCfg::parseCfg( int argc, char* argv[] )
   ("SEIFGCNumModelValuesMinus1Comp0",                 m_fgcSEINumModelValuesMinus1[0],                      0u, "Specifies the number of component model values minus1 on colour component 0.")
   ("SEIFGCNumModelValuesMinus1Comp1",                 m_fgcSEINumModelValuesMinus1[1],                      0u, "Specifies the number of component model values minus1 on colour component 1.")
   ("SEIFGCNumModelValuesMinus1Comp2",                 m_fgcSEINumModelValuesMinus1[2],                      0u, "Specifies the number of component model values minus1 on colour component 2.")
-  ("SEIFGCIntensityIntervalLowerBoundComp0", cfg_FgcSEIIntensityIntervalLowerBoundComp0, cfg_FgcSEIIntensityIntervalLowerBoundComp0, "Specifies the lower bound for the intensity intervals on colour component 0.")
-  ("SEIFGCIntensityIntervalLowerBoundComp1", cfg_FgcSEIIntensityIntervalLowerBoundComp1, cfg_FgcSEIIntensityIntervalLowerBoundComp1, "Specifies the lower bound for the intensity intervals on colour component 1.")
-  ("SEIFGCIntensityIntervalLowerBoundComp2", cfg_FgcSEIIntensityIntervalLowerBoundComp2, cfg_FgcSEIIntensityIntervalLowerBoundComp2, "Specifies the lower bound for the intensity intervals on colour component 2.")
-  ("SEIFGCIntensityIntervalUpperBoundComp0", cfg_FgcSEIIntensityIntervalUpperBoundComp0, cfg_FgcSEIIntensityIntervalUpperBoundComp0, "Specifies the upper bound for the intensity intervals on colour component 0.")
-  ("SEIFGCIntensityIntervalUpperBoundComp1", cfg_FgcSEIIntensityIntervalUpperBoundComp1, cfg_FgcSEIIntensityIntervalUpperBoundComp1, "Specifies the upper bound for the intensity intervals on colour component 1.")
-  ("SEIFGCIntensityIntervalUpperBoundComp2", cfg_FgcSEIIntensityIntervalUpperBoundComp2, cfg_FgcSEIIntensityIntervalUpperBoundComp2, "Specifies the upper bound for the intensity intervals on colour component 2.")
-  ("SEIFGCCompModelValuesComp0",             cfg_FgcSEICompModelValueComp0,              cfg_FgcSEICompModelValueComp0,              "Specifies the component model values on colour component 0.")
-  ("SEIFGCCompModelValuesComp1",             cfg_FgcSEICompModelValueComp1,              cfg_FgcSEICompModelValueComp1,              "Specifies the component model values on colour component 1.")
-  ("SEIFGCCompModelValuesComp2",             cfg_FgcSEICompModelValueComp2,              cfg_FgcSEICompModelValueComp2,              "Specifies the component model values on colour component 2.")
+  ("SEIFGCIntensityIntervalLowerBoundComp0", cfg_FgcSEIIntensityIntervalLowerBound[0], cfg_FgcSEIIntensityIntervalLowerBound[0], "Specifies the lower bound for the intensity intervals on colour component 0.")
+  ("SEIFGCIntensityIntervalLowerBoundComp1", cfg_FgcSEIIntensityIntervalLowerBound[1], cfg_FgcSEIIntensityIntervalLowerBound[1], "Specifies the lower bound for the intensity intervals on colour component 1.")
+  ("SEIFGCIntensityIntervalLowerBoundComp2", cfg_FgcSEIIntensityIntervalLowerBound[2], cfg_FgcSEIIntensityIntervalLowerBound[2], "Specifies the lower bound for the intensity intervals on colour component 2.")
+  ("SEIFGCIntensityIntervalUpperBoundComp0", cfg_FgcSEIIntensityIntervalUpperBound[0], cfg_FgcSEIIntensityIntervalUpperBound[0], "Specifies the upper bound for the intensity intervals on colour component 0.")
+  ("SEIFGCIntensityIntervalUpperBoundComp1", cfg_FgcSEIIntensityIntervalUpperBound[1], cfg_FgcSEIIntensityIntervalUpperBound[1], "Specifies the upper bound for the intensity intervals on colour component 1.")
+  ("SEIFGCIntensityIntervalUpperBoundComp2", cfg_FgcSEIIntensityIntervalUpperBound[2], cfg_FgcSEIIntensityIntervalUpperBound[2], "Specifies the upper bound for the intensity intervals on colour component 2.")
+  ("SEIFGCCompModelValuesComp0",             cfg_FgcSEICompModelValue[0],              cfg_FgcSEICompModelValue[0],              "Specifies the component model values on colour component 0.")
+  ("SEIFGCCompModelValuesComp1",             cfg_FgcSEICompModelValue[1],              cfg_FgcSEICompModelValue[1],              "Specifies the component model values on colour component 1.")
+  ("SEIFGCCompModelValuesComp2",             cfg_FgcSEICompModelValue[2],              cfg_FgcSEICompModelValue[2],              "Specifies the component model values on colour component 2.")
 // content light level SEI
   ("SEICLLEnabled",                                   m_cllSEIEnabled,                                   false, "Control generation of the content light level SEI message")
   ("SEICLLMaxContentLightLevel",                      m_cllSEIMaxContentLevel,                              0u, "When not equal to 0, specifies an upper bound on the maximum light level among all individual samples in a 4:4:4 representation "
@@ -1851,14 +1867,6 @@ bool EncAppCfg::parseCfg( int argc, char* argv[] )
   ("SEIPONumParametersIdc",                           m_poSEINumParametersIdc,                              0u, "Specifies max number of parameters needed by NNPFs in the processing chain. (0, default)")
   ("SEIPONumKmacOperationIdcg",                       m_poSEINumKmacOperationIdc,                           0u, "When greater than 0 specifies that the max number of multiply-accumulate operations per sample of the NNPFs is less than or equal to po_num_kmac_operations_idc * 1000. ) means unknown. (0, default)")
   ("SEIPOTotalKilobyteSize",                          m_poSEITotalKilobyteSize,                             0u, "When greater than 0 specifies a total size in kilobytes required to store the uncompressed parameters for NNPFs. 0 means unknown. (0, default)")
-  ("SEIPostFilterHintEnabled",                        m_postFilterHintSEIEnabled,                        false, "Control generation of post-filter Hint SEI message")
-  ("SEIPostFilterHintCancelFlag",                     m_postFilterHintSEICancelFlag,                     false, "Specifies the persistence of any previous post-filter Hint SEI message in output order")
-  ("SEIPostFilterHintPersistenceFlag",                m_postFilterHintSEIPersistenceFlag,                false, "Specifies the persistence of the post-filter Hint SEI message for the current layer")
-  ("SEIPostFilterHintSizeY",                          m_postFilterHintSEISizeY,                             1u, "Specifies the vertical size of the post-filter coefficient or correlation array")
-  ("SEIPostFilterHintSizeX",                          m_postFilterHintSEISizeX,                             1u, "Specifies the horizontal size of the post-filter coefficient or correlation array")
-  ("SEIPostFilterHintType",                           m_postFilterHintSEIType,                              0u, "Specifies the type of the post-filter: 2D-FIR filter (0, default), 1D-FIR filters (1) or Cross-correlation matrix (0)")
-  ("SEIPostFilterHintChromaCoeffPresentFlag",         m_postFilterHintSEIChromaCoeffPresentFlag,         false, "Specifies the presence of post-filter coefficients for chroma")
-  ("SEIPostFilterHintValue",                          cfg_postFilterHintSEIValues, cfg_postFilterHintSEIValues, "Specifies post-filter coefficients or elements of a cross-correlation matrix")
 
   //SEI manifest
   ("SEISEIManifestEnabled",                           m_SEIManifestSEIEnabled,                           false, "Controls if SEI Manifest SEI messages enabled")
@@ -3636,14 +3644,14 @@ bool EncAppCfg::parseCfg( int argc, char* argv[] )
         {
           CHECK(cfg_greenMetadataAMIPreprocessingFlag.values.size() != m_greenMetadataAMIMapNumber,
                 "Number of AMI preprocessing flags must be equal to AMI map number.");
-          CHECK(cfg_greenMetadataAMIPreprocessingTypeIdc.values.size() != m_greenMetadataAMIMapNumber,
-                "Number of AMI preprocessing types must be equal to AMI map number.");
           CHECK(cfg_greenMetadataAMIPreprocessingScaleIdc.values.size() != m_greenMetadataAMIMapNumber,
                 "Number of AMI preprocessing scales must be equal to AMI map number.");
         }
         if (m_greenMetadataAMIBacklightFlag)
+        {
           CHECK(cfg_greenMetadataAMIBacklightScalingIdc.values.size() != m_greenMetadataAMIMapNumber,
                 "Number of AMI backlight scalings must be equal to AMI map number.");
+        }
       }
       else
       {
@@ -3655,14 +3663,14 @@ bool EncAppCfg::parseCfg( int argc, char* argv[] )
         {
           CHECK(cfg_greenMetadataAMIPreprocessingFlag.values.size() != 1,
                 "Number of AMI preprocessing flags must be equal to 1.");
-          CHECK(cfg_greenMetadataAMIPreprocessingTypeIdc.values.size() != 1,
-                "Number of AMI preprocessing types must be equal to 1.");
           CHECK(cfg_greenMetadataAMIPreprocessingScaleIdc.values.size() != 1,
                 "Number of AMI preprocessing scales must be equal to 1.");
         }
         if (m_greenMetadataAMIBacklightFlag)
+        {
           CHECK(cfg_greenMetadataAMIBacklightScalingIdc.values.size() != 1,
                 "Number of AMI backlight scalings must be equal to 1.");
+        }
       }
       int totalOlsIds = 0;
       for (int i = 0; i < m_greenMetadataAMIMapNumber; i++)
@@ -3693,8 +3701,9 @@ bool EncAppCfg::parseCfg( int argc, char* argv[] )
         m_greenMetadataAMIPreprocessingScaleIdc.resize(totalSize);
       }
       if (m_greenMetadataAMIBacklightFlag)
+      {
         m_greenMetadataAMIBacklightScalingIdc.resize(totalSize);
-
+      }
       int index = 0;
       for (int i = 0; i < m_greenMetadataAMIMapNumber; i++)
       {
@@ -3723,12 +3732,17 @@ bool EncAppCfg::parseCfg( int argc, char* argv[] )
         m_greenMetadataAMIAttenuationCompIdc[i] = uint8_t(cfg_greenMetadataAMIAttenuationCompIdc.values[i]);
         if (m_greenMetadataAMIPreprocFlag)
         {
-          m_greenMetadataAMIPreprocessingFlag[i]     = uint8_t(cfg_greenMetadataAMIPreprocessingFlag.values[i]);
-          m_greenMetadataAMIPreprocessingTypeIdc[i]  = uint8_t(cfg_greenMetadataAMIPreprocessingTypeIdc.values[i]);
+          m_greenMetadataAMIPreprocessingFlag[i] = uint8_t(cfg_greenMetadataAMIPreprocessingFlag.values[i]);
+          if (m_greenMetadataAMIPreprocessingFlag[i])
+          {
+            m_greenMetadataAMIPreprocessingTypeIdc[i] = uint8_t(cfg_greenMetadataAMIPreprocessingTypeIdc.values[i]);
+          }
           m_greenMetadataAMIPreprocessingScaleIdc[i] = uint8_t(cfg_greenMetadataAMIPreprocessingScaleIdc.values[i]);
         }
         if (m_greenMetadataAMIBacklightFlag)
+        {
           m_greenMetadataAMIBacklightScalingIdc[i] = uint8_t(cfg_greenMetadataAMIBacklightScalingIdc.values[i]);
+        }
       }
     }
     else
@@ -3787,48 +3801,21 @@ bool EncAppCfg::parseCfg( int argc, char* argv[] )
       int filteredFrame = m_intraPeriod < 1 ? 2 * m_frameRate.getIntValRound() : m_intraPeriod;
       m_fgcSEITemporalFilterStrengths[filteredFrame] = 1.5;
     }
-    uint32_t numModelCtr;
-    if (m_fgcSEICompModelPresent[0])
+    for (int comp = 0; comp < MAX_NUM_COMPONENT; comp++)
     {
-      numModelCtr = 0;
-      for (uint8_t i = 0; i <= m_fgcSEINumIntensityIntervalMinus1[0]; i++)
+      if (m_fgcSEICompModelPresent[comp])
       {
-        m_fgcSEIIntensityIntervalLowerBound[0][i] = uint32_t((cfg_FgcSEIIntensityIntervalLowerBoundComp0.values.size() > i) ? cfg_FgcSEIIntensityIntervalLowerBoundComp0.values[i] : 10);
-        m_fgcSEIIntensityIntervalUpperBound[0][i] = uint32_t((cfg_FgcSEIIntensityIntervalUpperBoundComp0.values.size() > i) ? cfg_FgcSEIIntensityIntervalUpperBoundComp0.values[i] : 250);
-        for (uint8_t j = 0; j <= m_fgcSEINumModelValuesMinus1[0]; j++)
+        uint32_t numModelCtr = 0;
+        for (uint8_t i = 0; i <= m_fgcSEINumIntensityIntervalMinus1[comp]; i++)
         {
-          m_fgcSEICompModelValue[0][i][j] = uint32_t((cfg_FgcSEICompModelValueComp0.values.size() > numModelCtr) ? cfg_FgcSEICompModelValueComp0.values[numModelCtr] : 24);
-          numModelCtr++;
-        }
-      }
-    }
-    if (m_fgcSEICompModelPresent[1])
-    {
-      numModelCtr = 0;
-      for (uint8_t i = 0; i <= m_fgcSEINumIntensityIntervalMinus1[1]; i++)
-      {
-        m_fgcSEIIntensityIntervalLowerBound[1][i] = uint32_t((cfg_FgcSEIIntensityIntervalLowerBoundComp1.values.size() > i) ? cfg_FgcSEIIntensityIntervalLowerBoundComp1.values[i] : 60);
-        m_fgcSEIIntensityIntervalUpperBound[1][i] = uint32_t((cfg_FgcSEIIntensityIntervalUpperBoundComp1.values.size() > i) ? cfg_FgcSEIIntensityIntervalUpperBoundComp1.values[i] : 200);
+          m_fgcSEIIntensityIntervalLowerBound[comp][i] = uint32_t((cfg_FgcSEIIntensityIntervalLowerBound[comp].values.size() > i) ? cfg_FgcSEIIntensityIntervalLowerBound[comp].values[i] : 10);
+          m_fgcSEIIntensityIntervalUpperBound[comp][i] = uint32_t((cfg_FgcSEIIntensityIntervalUpperBound[comp].values.size() > i) ? cfg_FgcSEIIntensityIntervalUpperBound[comp].values[i] : 250);
 
-        for (uint8_t j = 0; j <= m_fgcSEINumModelValuesMinus1[1]; j++)
-        {
-          m_fgcSEICompModelValue[1][i][j] = uint32_t((cfg_FgcSEICompModelValueComp1.values.size() > numModelCtr) ? cfg_FgcSEICompModelValueComp1.values[numModelCtr] : 16);
-          numModelCtr++;
-        }
-      }
-    }
-    if (m_fgcSEICompModelPresent[2])
-    {
-      numModelCtr = 0;
-      for (uint8_t i = 0; i <= m_fgcSEINumIntensityIntervalMinus1[2]; i++)
-      {
-        m_fgcSEIIntensityIntervalLowerBound[2][i] = uint32_t((cfg_FgcSEIIntensityIntervalLowerBoundComp2.values.size() > i) ? cfg_FgcSEIIntensityIntervalLowerBoundComp2.values[i] : 60);
-        m_fgcSEIIntensityIntervalUpperBound[2][i] = uint32_t((cfg_FgcSEIIntensityIntervalUpperBoundComp2.values.size() > i) ? cfg_FgcSEIIntensityIntervalUpperBoundComp2.values[i] : 250);
-
-        for (uint8_t j = 0; j <= m_fgcSEINumModelValuesMinus1[2]; j++)
-        {
-          m_fgcSEICompModelValue[2][i][j] = uint32_t((cfg_FgcSEICompModelValueComp2.values.size() > numModelCtr) ? cfg_FgcSEICompModelValueComp2.values[numModelCtr] : 12);
-          numModelCtr++;
+          for (uint8_t j = 0; j <= m_fgcSEINumModelValuesMinus1[comp]; j++)
+          {
+            m_fgcSEICompModelValue[comp][i][j] = uint32_t((cfg_FgcSEICompModelValue[comp].values.size() > numModelCtr) ? cfg_FgcSEICompModelValue[comp].values[numModelCtr] : getDefaultFgcCompModelValue(comp));
+            numModelCtr++;
+          }
         }
       }
     }
@@ -4435,17 +4422,6 @@ bool EncAppCfg::parseCfg( int argc, char* argv[] )
     msg(WARNING, "\nWarning: Resetting SEINNPostFilterActivationSelectedInputFlag to 0 (it shall be zero when NNPFA SEI is not present in PON SEI)\n");
   }
 
-  if (m_postFilterHintSEIEnabled)
-  {
-    CHECK(cfg_postFilterHintSEIValues.values.size() <= 0, "The number of filter coefficient shall be greater than zero");
-    CHECK(!(cfg_postFilterHintSEIValues.values.size() == ((m_postFilterHintSEIChromaCoeffPresentFlag ? 3 : 1) * m_postFilterHintSEISizeY * m_postFilterHintSEISizeX)), "The number of filter coefficient shall match the matrix size and considering whether filters for chroma is present of not");
-    m_postFilterHintValues.resize(cfg_postFilterHintSEIValues.values.size());
-
-    for (uint32_t i = 0; i < m_postFilterHintValues.size(); i++)
-    {
-      m_postFilterHintValues[i] = cfg_postFilterHintSEIValues.values[i];
-    }
-  }
   if (m_generativeFaceVideoEnabled)
   {
     CHECK(cfg_generativeFaceVideoSEIId.values.size() != m_generativeFaceVideoSEINumber, "Number of GFV ID must be equal to SEINumber");

@@ -145,4 +145,3 @@ Install the needed toolchains:
 pacman -S --needed base-devel mingw-w64-i686-toolchain mingw-w64-x86_64-toolchain git subversion mingw-w64-i686-cmake mingw-w64-x86_64-cmake
 ```
 
-"# VVCSoftware_VTM-VTM-24.0" 

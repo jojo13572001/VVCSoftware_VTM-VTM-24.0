@@ -512,6 +512,10 @@ DecLib::DecLib()
   , m_firstPictureInSequence(true)
   , m_grainCharacteristic()
   , m_grainBuf()
+#if GREEN_METADATA_SEI_ENABLED && GREEN_METADATA_SEI_AMI_ENABLED_WG03_N01464
+  , m_greenMetadataCharacteristic()
+  , m_attenuatedBuf()
+#endif
   , m_colourTranfParams()
   , m_firstSliceInBitstream(true)
   , m_isFirstAuInCvs(true)
@@ -1506,9 +1510,6 @@ void DecLib::checkSeiInPictureUnit()
 {
   std::vector<std::pair<SEI::PayloadType, std::vector<uint8_t>>> seiList;
 
-  bool prefixPostfilterHintSEI = false;
-  bool suffixPostfilterHintSEI = false;
-
   // payload types subject to constrained SEI repetition
   const std::set<SEI::PayloadType> picUnitRepConSeiList = {
     SEI::PayloadType::BUFFERING_PERIOD,                             // 0,
@@ -1585,17 +1586,6 @@ void DecLib::checkSeiInPictureUnit()
       }
       seiList.push_back(data);
 
-      if (data.first == SEI::PayloadType::POST_FILTER_HINT)
-      {
-        if (sei->m_nalUnitType == NalUnitType::NAL_UNIT_PREFIX_SEI)
-        {
-          prefixPostfilterHintSEI = true;
-        }
-        else if (sei->m_nalUnitType == NalUnitType::NAL_UNIT_SUFFIX_SEI)
-        {
-          suffixPostfilterHintSEI = true;
-        }
-      }
     } while (bs.getNumBitsLeft() > 8);
   }
 
@@ -1626,10 +1616,6 @@ void DecLib::checkSeiInPictureUnit()
             "There shall be less than or equal to 4 identical sei_payload( ) syntax structures within a picture unit.");
     }
   }
-
-  CHECK(prefixPostfilterHintSEI && suffixPostfilterHintSEI,
-        "Post-filter hint SEI message shall not be present in both a prefix SEI NALU and a suffix SEI NALU in the same "
-        "picture unit")
 }
 
 /**
@@ -2224,6 +2210,16 @@ void DecLib::xActivateParameterSets( const InputNALUnit nalu )
     m_pcPic->createGrainSynthesizer(m_firstPictureInSequence, &m_grainCharacteristic, &m_grainBuf,
                                     pps->getPicWidthInLumaSamples(), pps->getPicHeightInLumaSamples(),
                                     sps->getChromaFormatIdc(), sps->getBitDepth(ChannelType::LUMA));
+#if GREEN_METADATA_SEI_ENABLED && GREEN_METADATA_SEI_AMI_ENABLED_WG03_N01464
+    bool fullRangeFlag = false;
+    if (m_pcPic->cs->sps->getVuiParametersPresentFlag())
+    {
+      fullRangeFlag = m_pcPic->cs->sps->getVuiParameters()->getVideoFullRangeFlag();
+    }
+    m_pcPic->createGreenMetadataAMIProcessor(m_firstPictureInSequence, &m_greenMetadataCharacteristic, &m_attenuatedBuf,
+                                             pps->getPicWidthInLumaSamples(), pps->getPicHeightInLumaSamples(),
+                                             sps->getChromaFormatIdc(), sps->getBitDepth(ChannelType::LUMA), fullRangeFlag);
+#endif
     m_pcPic->createColourTransfProcessor(m_firstPictureInSequence, &m_colourTranfParams, &m_invColourTransfBuf,
                                          pps->getPicWidthInLumaSamples(), pps->getPicHeightInLumaSamples(),
                                          sps->getChromaFormatIdc(), sps->getBitDepth(ChannelType::LUMA));
@@ -3588,13 +3584,7 @@ bool DecLib::xDecodeSlice(InputNALUnit &nalu, int &iSkipFrame, int iPOCLastDispl
   //---------------
   pcSlice->setRefPOCList();
 
-  NalUnitInfo naluInfo;
-  naluInfo.m_nalUnitType     = nalu.m_nalUnitType;
-  naluInfo.m_nuhLayerId      = nalu.m_nuhLayerId;
-  naluInfo.m_firstCTUinSlice = pcSlice->getFirstCtuRsAddrInSlice();
-  naluInfo.m_POC             = pcSlice->getPOC();
   xCheckMixedNalUnit(pcSlice, sps, nalu);
-  m_nalUnitInfo[naluInfo.m_nuhLayerId].push_back(naluInfo);
   SEIMessages drapSEIs = getSeisByType(m_pcPic->SEIs, SEI::PayloadType::DEPENDENT_RAP_INDICATION);
   if (!drapSEIs.empty())
   {

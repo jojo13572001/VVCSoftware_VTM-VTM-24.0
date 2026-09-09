@@ -295,6 +295,11 @@ protected:
 
   ChromaQpMappingTableParams m_chromaQpMappingTableParams;
   int       m_intraQPOffset;                    ///< QP offset for intra slice (integer)
+#if JVET_AP0070
+  std::map<int, int> m_interQPOffsetFrame;
+  std::map<int, double> m_interQPOffsetModelOffsetFrame;
+  std::map<int, double> m_interQPOffsetModelScaleFrame;
+#endif
   int       m_lambdaFromQPEnable;               ///< enable lambda derivation from QP
   double    m_lambdaScaleTowardsNextQP;         ///< scale lambda towards lambda of next QP
   bool      m_AccessUnitDelimiter;               ///< add Access Unit Delimiter NAL units
@@ -1002,14 +1007,6 @@ protected:
   uint32_t              m_poSEINumKmacOperationIdc;
   uint32_t              m_poSEITotalKilobyteSize;
   std::vector<std::vector<uint8_t>>  m_poSEIPrefixByte;
-  bool                 m_postFilterHintSEIEnabled;
-  bool                 m_postFilterHintSEICancelFlag;
-  bool                 m_postFilterHintSEIPersistenceFlag;
-  uint32_t             m_postFilterHintSEISizeY;
-  uint32_t             m_postFilterHintSEISizeX;
-  uint32_t             m_postFilterHintSEIType;
-  bool                 m_postFilterHintSEIChromaCoeffPresentFlag;
-  std::vector<int32_t> m_postFilterHintValues;
   uint16_t                 m_textDescriptionSEIId;
   bool                     m_textSEICancelFlag;
   bool                     m_textSEIIDCancelFlag;
@@ -1540,6 +1537,11 @@ public:
   void      setBaseQP                       ( int   i )      { m_iQP = i; }
   void      setQpRefAdj(int deltaQp) { m_qpRefAdj = deltaQp; }
   void      setIntraQPOffset                ( int   i )         { m_intraQPOffset = i; }
+#if JVET_AP0070
+  void      setInterQPOffsetFrame           (std::map<int, int> interQPOffsetFrame) { m_interQPOffsetFrame = interQPOffsetFrame; }
+  void      setInterQPOffsetModelOffsetFrame(std::map<int, double> interQPOffsetModelOffsetFrame) { m_interQPOffsetModelOffsetFrame = interQPOffsetModelOffsetFrame; }
+  void      setInterQPOffsetModelScaleFrame(std::map<int, double> interQPOffsetModelScaleFrame) { m_interQPOffsetModelScaleFrame = interQPOffsetModelScaleFrame; }
+#endif
   void      setLambdaFromQPEnable           ( bool  b )         { m_lambdaFromQPEnable = b; }
   void      setChromaQpMappingTableParams   (const ChromaQpMappingTableParams &params) { m_chromaQpMappingTableParams = params; }
 
@@ -3073,22 +3075,6 @@ public:
   void     setPoSEITotalKilobyteSize(uint32_t b)                     { m_poSEITotalKilobyteSize = b; }
   uint32_t getPoSEITotalKilobyteSize()                               { return m_poSEITotalKilobyteSize; }
   std::vector<uint8_t>  getPoSEIPrefixByte(uint16_t idx)       const { return m_poSEIPrefixByte[idx]; }
-  void     setPostFilterHintSEIEnabled(bool b) { m_postFilterHintSEIEnabled = b; }
-  bool     getPostFilterHintSEIEnabled() { return m_postFilterHintSEIEnabled; }
-  void     setPostFilterHintSEICancelFlag(bool b) { m_postFilterHintSEICancelFlag = b; }
-  bool     getPostFilterHintSEICancelFlag() { return m_postFilterHintSEICancelFlag; }
-  void     setPostFilterHintSEIPersistenceFlag(bool b) { m_postFilterHintSEIPersistenceFlag = b; }
-  bool     getPostFilterHintSEIPersistenceFlag() { return m_postFilterHintSEIPersistenceFlag; }
-  void     setPostFilterHintSEISizeY(uint32_t i) { m_postFilterHintSEISizeY = i; }
-  uint32_t getPostFilterHintSEISizeY() { return m_postFilterHintSEISizeY; }
-  void     setPostFilterHintSEISizeX(uint32_t i) { m_postFilterHintSEISizeX = i; }
-  uint32_t getPostFilterHintSEISizeX() { return m_postFilterHintSEISizeX; }
-  void     setPostFilterHintSEIType(uint32_t i) { m_postFilterHintSEIType = i; }
-  uint32_t getPostFilterHintSEIType() { return m_postFilterHintSEIType; }
-  void     setPostFilterHintSEIChromaCoeffPresentFlag(bool b) { m_postFilterHintSEIChromaCoeffPresentFlag = b; }
-  bool     getPostFilterHintSEIChromaCoeffPresentFlag() { return m_postFilterHintSEIChromaCoeffPresentFlag; }
-  void     setPostFilterHintSEIValues(const std::vector<int32_t> &b) { m_postFilterHintValues = b; }
-  int32_t  getPostFilterHintSEIValues(int32_t idx) const { return m_postFilterHintValues[idx]; }
   void         setTextDescriptionSEIId(const uint16_t i) {m_textDescriptionSEIId = i;}
   uint32_t     getTextDescriptionSEIId() {return m_textDescriptionSEIId;}
   void         setTextSEICancelFlag(bool b) {m_textSEICancelFlag = b;}

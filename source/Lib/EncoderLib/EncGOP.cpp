@@ -1169,15 +1169,7 @@ void EncGOP::xCreatePerPictureSEIMessages (int picInGOP, SEIMessages& seiMessage
     xCreateNNPostFilterActivationSEIMessage(seiMessages, slice);
   }
 
-  if (m_pcCfg->getPostFilterHintSEIEnabled())
-  {
-    SEIPostFilterHint *postFilterHintSEI = new SEIPostFilterHint;
-
-    m_seiEncoder.initSEIPostFilterHint(postFilterHintSEI);
-    seiMessages.push_back(postFilterHintSEI);
-  }
 #if JVET_AJ0151_DSC_SEI
-
   if (m_pcCfg->getDigitallySignedContentSEICfg().enabled)
   {
     SEIDigitallySignedContentSelection *sei = new SEIDigitallySignedContentSelection;
@@ -4089,13 +4081,11 @@ void EncGOP::compressGOP(int pocLast, int numPicRcvd, PicList &rcListPic, std::l
                                 ? static_cast<int>(2 * m_pcCfg->getFrameRate().getFloatVal() + 0.5)
                                 : m_pcCfg->getIntraPeriod();
       bool readyToAnalyze   = pcPic->getPOC() % filteredFrame
-                                ? false
-                                : true;   // either it is mctf denoising or external source for film grain analysis. note:
-                                          // if mctf is used, it is different from mctf for encoding.
+                                ? false : true;
       if (readyToAnalyze)
       {
         m_fgAnalyzer.initBufs(pcPic);
-        m_fgAnalyzer.estimate_grain(pcPic);
+        m_fgAnalyzer.estimateGrain(pcPic);
       }
     }
 

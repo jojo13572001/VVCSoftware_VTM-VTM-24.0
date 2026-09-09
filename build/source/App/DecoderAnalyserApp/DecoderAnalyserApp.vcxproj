@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3C47996F-D4C9-3CFC-9B8F-5615090DAFA2}</ProjectGuid>
+    <ProjectGuid>{164BA2B4-A5ED-3BBA-906D-294D4D565DB6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\bin\vs17\msvc-19.44\x86_64\debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\bin\vs17\msvc-19.44\x86_64\debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">DecoderAnalyserApp.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">DecoderAnalyserApp</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\bin\vs17\msvc-19.44\x86_64\release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\bin\vs17\msvc-19.44\x86_64\release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">DecoderAnalyserApp.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">DecoderAnalyserApp</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\bin\vs17\msvc-19.44\x86_64\minsizerel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\bin\vs17\msvc-19.44\x86_64\minsizerel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">DecoderAnalyserApp.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">DecoderAnalyserApp</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\bin\vs17\msvc-19.44\x86_64\relwithdebinfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\bin\vs17\msvc-19.44\x86_64\relwithdebinfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">DecoderAnalyserApp.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">DecoderAnalyserApp</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -111,10 +111,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;RExt__DECODER_DEBUG_BIT_STATISTICS=1;RExt__DECODER_DEBUG_TOOL_STATISTICS=1;JVET_AJ0151_DSC_SEI=0;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -122,13 +122,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\debug\CommonAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\debug\DecoderAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\debug\Utilities.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\debug\CommonAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\debug\CommonLib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\debug\CommonAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\debug\DecoderAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\debug\Utilities.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\debug\CommonAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\debug\CommonLib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/lib/vs17/msvc-19.44/x86_64/debug/DecoderAnalyserApp.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/bin/vs17/msvc-19.44/x86_64/debug/DecoderAnalyserApp.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/lib/vs17/msvc-19.44/x86_64/debug/DecoderAnalyserApp.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/bin/vs17/msvc-19.44/x86_64/debug/DecoderAnalyserApp.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -137,7 +137,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -163,10 +163,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;RExt__DECODER_DEBUG_BIT_STATISTICS=1;RExt__DECODER_DEBUG_TOOL_STATISTICS=1;JVET_AJ0151_DSC_SEI=0;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -174,13 +174,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\release\CommonAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\release\DecoderAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\release\Utilities.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\release\CommonAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\release\CommonLib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\release\CommonAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\release\DecoderAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\release\Utilities.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\release\CommonAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\release\CommonLib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/lib/vs17/msvc-19.44/x86_64/release/DecoderAnalyserApp.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/bin/vs17/msvc-19.44/x86_64/release/DecoderAnalyserApp.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/lib/vs17/msvc-19.44/x86_64/release/DecoderAnalyserApp.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/bin/vs17/msvc-19.44/x86_64/release/DecoderAnalyserApp.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -189,7 +189,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -215,10 +215,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;RExt__DECODER_DEBUG_BIT_STATISTICS=1;RExt__DECODER_DEBUG_TOOL_STATISTICS=1;JVET_AJ0151_DSC_SEI=0;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -226,13 +226,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\minsizerel\CommonAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\minsizerel\DecoderAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\minsizerel\Utilities.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\minsizerel\CommonAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\minsizerel\CommonLib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\minsizerel\CommonAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\minsizerel\DecoderAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\minsizerel\Utilities.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\minsizerel\CommonAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\minsizerel\CommonLib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/lib/vs17/msvc-19.44/x86_64/minsizerel/DecoderAnalyserApp.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/bin/vs17/msvc-19.44/x86_64/minsizerel/DecoderAnalyserApp.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/lib/vs17/msvc-19.44/x86_64/minsizerel/DecoderAnalyserApp.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/bin/vs17/msvc-19.44/x86_64/minsizerel/DecoderAnalyserApp.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -241,7 +241,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -266,10 +266,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;RExt__DECODER_DEBUG_BIT_STATISTICS=1;RExt__DECODER_DEBUG_TOOL_STATISTICS=1;JVET_AJ0151_DSC_SEI=0;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\App\DecoderAnalyserApp;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\CommonLib\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonAnalyserLib\..\libmd5;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\DecoderAnalyserLib\..\DecoderLib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\Utilities\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\.\x86;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\Lib\CommonLib\..\libmd5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -277,13 +277,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\relwithdebinfo\CommonAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\relwithdebinfo\DecoderAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\relwithdebinfo\Utilities.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\relwithdebinfo\CommonAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\lib\vs17\msvc-19.44\x86_64\relwithdebinfo\CommonLib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\relwithdebinfo\CommonAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\relwithdebinfo\DecoderAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\relwithdebinfo\Utilities.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\relwithdebinfo\CommonAnalyserLib.lib;C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\lib\vs17\msvc-19.44\x86_64\relwithdebinfo\CommonLib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/lib/vs17/msvc-19.44/x86_64/relwithdebinfo/DecoderAnalyserApp.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/bin/vs17/msvc-19.44/x86_64/relwithdebinfo/DecoderAnalyserApp.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/lib/vs17/msvc-19.44/x86_64/relwithdebinfo/DecoderAnalyserApp.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/bin/vs17/msvc-19.44/x86_64/relwithdebinfo/DecoderAnalyserApp.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -291,11 +291,11 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\App\DecoderAnalyserApp\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\App\DecoderAnalyserApp\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/source/App/DecoderAnalyserApp/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/source/App/DecoderAnalyserApp/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0 -BC:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/build --check-stamp-file C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/build/source/App/DecoderAnalyserApp/CMakeFiles/generate.stamp
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master -BC:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/build --check-stamp-file C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/build/source/App/DecoderAnalyserApp/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -304,11 +304,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\App\DecoderAnalyserApp\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\App\DecoderAnalyserApp\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/source/App/DecoderAnalyserApp/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/source/App/DecoderAnalyserApp/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0 -BC:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/build --check-stamp-file C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/build/source/App/DecoderAnalyserApp/CMakeFiles/generate.stamp
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master -BC:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/build --check-stamp-file C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/build/source/App/DecoderAnalyserApp/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -317,11 +317,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\App\DecoderAnalyserApp\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\App\DecoderAnalyserApp\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/source/App/DecoderAnalyserApp/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/source/App/DecoderAnalyserApp/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0 -BC:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/build --check-stamp-file C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/build/source/App/DecoderAnalyserApp/CMakeFiles/generate.stamp
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master -BC:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/build --check-stamp-file C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/build/source/App/DecoderAnalyserApp/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -330,11 +330,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\App\DecoderAnalyserApp\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\App\DecoderAnalyserApp\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/source/App/DecoderAnalyserApp/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/source/App/DecoderAnalyserApp/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0 -BC:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/build --check-stamp-file C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0/build/source/App/DecoderAnalyserApp/CMakeFiles/generate.stamp
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master -BC:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/build --check-stamp-file C:/Users/ara71/Documents/Git/VVCSoftware_VTM-VTM-24.0-master/build/source/App/DecoderAnalyserApp/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -343,43 +343,43 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\App\DecoderAnalyserApp\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\App\DecoderAnalyserApp\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\App\DecoderApp\DecApp.cpp" />
-    <ClCompile Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\App\DecoderApp\DecAppCfg.cpp" />
-    <ClCompile Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\App\DecoderApp\decmain.cpp" />
-    <ClInclude Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\App\DecoderApp\DecApp.h" />
-    <ClInclude Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\App\DecoderApp\DecAppCfg.h" />
-    <Natvis Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\VisualStudio\common.natvis">
+    <ClCompile Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\App\DecoderApp\DecApp.cpp" />
+    <ClCompile Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\App\DecoderApp\DecAppCfg.cpp" />
+    <ClCompile Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\App\DecoderApp\decmain.cpp" />
+    <ClInclude Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\App\DecoderApp\DecApp.h" />
+    <ClInclude Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\App\DecoderApp\DecAppCfg.h" />
+    <Natvis Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\VisualStudio\common.natvis">
     </Natvis>
-    <Natvis Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\source\VisualStudio\static_vector.natvis">
+    <Natvis Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\source\VisualStudio\static_vector.natvis">
     </Natvis>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\ZERO_CHECK.vcxproj">
-      <Project>{7CB1D113-0674-3767-90C5-3E60EB146AFA}</Project>
+    <ProjectReference Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\ZERO_CHECK.vcxproj">
+      <Project>{5F18177E-1EDC-3D31-B6D6-55CF081DA5B0}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\Lib\CommonAnalyserLib\CommonAnalyserLib.vcxproj">
-      <Project>{CDD7006E-D0DB-3191-AB01-FEC35D8BB8DF}</Project>
+    <ProjectReference Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\Lib\CommonAnalyserLib\CommonAnalyserLib.vcxproj">
+      <Project>{ED24E0B6-FAE2-3C25-B0CF-889324EF36AA}</Project>
       <Name>CommonAnalyserLib</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\Lib\CommonLib\CommonLib.vcxproj">
-      <Project>{D2717577-7257-3F35-901B-CD4FAF8DCC21}</Project>
+    <ProjectReference Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\Lib\CommonLib\CommonLib.vcxproj">
+      <Project>{17C5C78B-9045-3173-8D80-4FBBDA76CF6A}</Project>
       <Name>CommonLib</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\Lib\DecoderAnalyserLib\DecoderAnalyserLib.vcxproj">
-      <Project>{0F575C1E-D341-30B4-8FFB-FCBF9741873F}</Project>
+    <ProjectReference Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\Lib\DecoderAnalyserLib\DecoderAnalyserLib.vcxproj">
+      <Project>{166BC679-A83D-3AE1-8AD9-E176A8ADAC4A}</Project>
       <Name>DecoderAnalyserLib</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0\build\source\Lib\Utilities\Utilities.vcxproj">
-      <Project>{258BA593-B1ED-3F8A-ADA1-7E86A21D8443}</Project>
+    <ProjectReference Include="C:\Users\ara71\Documents\Git\VVCSoftware_VTM-VTM-24.0-master\build\source\Lib\Utilities\Utilities.vcxproj">
+      <Project>{3456F2E3-8F8E-3EA5-88C4-7BF7FAD5BE7B}</Project>
       <Name>Utilities</Name>
     </ProjectReference>
   </ItemGroup>

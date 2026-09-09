@@ -272,6 +272,11 @@ protected:
 
   ChromaQpMappingTableParams m_chromaQpMappingTableParams;
   int       m_intraQPOffset;                                  ///< QP offset for intra slice (integer)
+#if JVET_AP0070
+  std::map<int, int> m_interQPOffsetFrame;                    ///< QP offset for inter picture
+  std::map<int, double> m_interQPOffsetModelOffsetFrame;      ///< QP offset model offset for inter picture
+  std::map<int, double> m_interQPOffsetModelScaleFrame;       ///< QP offset model scale for inter picture
+#endif
   bool      m_lambdaFromQPEnable;                             ///< enable flag for QP:lambda fix
   double    m_lambdaScaleTowardsNextQP;                       ///< scale lambda towards lambda of next QP
   std::string m_dQPFileName;                                  ///< QP offset for each slice (initialized from external file)
@@ -894,15 +899,7 @@ protected:
   std::vector<uint8_t>  m_ifmDataPayloadByte[MAX_NUM_IMAGE_FORMAT_METADATA_SEI];
   std::string           m_ifmDataUri[MAX_NUM_IMAGE_FORMAT_METADATA_SEI];
 
-  bool                 m_postFilterHintSEIEnabled;
-  bool                 m_postFilterHintSEICancelFlag;
   bool                 m_SEITextIDCancelFlag;
-  bool                 m_postFilterHintSEIPersistenceFlag;
-  uint32_t             m_postFilterHintSEISizeY;
-  uint32_t             m_postFilterHintSEISizeX;
-  uint32_t             m_postFilterHintSEIType;
-  bool                 m_postFilterHintSEIChromaCoeffPresentFlag;
-  std::vector<int32_t> m_postFilterHintValues;
 
   bool                  m_constrainedRaslEncoding;
 

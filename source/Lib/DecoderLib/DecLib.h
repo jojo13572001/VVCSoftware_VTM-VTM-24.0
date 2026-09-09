@@ -153,6 +153,10 @@ private:
   bool                    m_firstPictureInSequence;
   SEIFilmGrainSynthesizer m_grainCharacteristic;
   PelStorage              m_grainBuf;
+#if GREEN_METADATA_SEI_ENABLED && GREEN_METADATA_SEI_AMI_ENABLED_WG03_N01464
+  SEIGreenMetadataApply   m_greenMetadataCharacteristic;
+  PelStorage              m_attenuatedBuf;
+#endif
   SEIColourTransformApply m_colourTranfParams;
   PelStorage              m_invColourTransfBuf;
   bool                    m_firstSliceInSequence[MAX_VPS_LAYERS];
@@ -206,14 +210,6 @@ private:
   };
   std::vector<AccessUnitNestedSliSeiInfo> m_accessUnitNestedSliSeiInfo;
   int m_accessUnitSpsNumSubpic[MAX_VPS_LAYERS];
-  struct NalUnitInfo
-  {
-    NalUnitType     m_nalUnitType; ///< nal_unit_type
-    uint32_t        m_nuhLayerId;  ///< nuh_layer_id
-    uint32_t        m_firstCTUinSlice; /// the first CTU in slice, specified with raster scan order ctu address
-    int             m_POC;             /// the picture order
-  };
-  std::vector<NalUnitInfo> m_nalUnitInfo[MAX_VPS_LAYERS];
   EnumArray<std::vector<int>, ApsType> m_accessUnitApsNals;
   std::vector<int> m_accessUnitSeiTids;
   std::vector<bool> m_accessUnitNoOutputPriorPicFlags;
